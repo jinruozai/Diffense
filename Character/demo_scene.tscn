@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsn8bmgms546r"]
+[gd_scene load_steps=11 format=3 uid="uid://bsn8bmgms546r"]
 
 [ext_resource type="PackedScene" uid="uid://caxg5topo2eso" path="res://Character/Knight.tscn" id="1_f1pp4"]
 [ext_resource type="Texture2D" uid="uid://bo527llo2r46b" path="res://Asset/Texture/texture_terrain.jpg" id="1_pkwfo"]
@@ -23,6 +23,12 @@ size = Vector3(1000, 1, 1000)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hjl16"]
 size = Vector3(1000, 1, 1000)
 
+[sub_resource type="BoxMesh" id="BoxMesh_tt6e4"]
+size = Vector3(20, 10, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6acym"]
+size = Vector3(20, 10, 3)
+
 [node name="DemoScene" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -40,5 +46,14 @@ mesh = SubResource("BoxMesh_pvt0u")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
 shape = SubResource("BoxShape3D_hjl16")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -22.8693)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D"]
+mesh = SubResource("BoxMesh_tt6e4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+shape = SubResource("BoxShape3D_6acym")
+
 [node name="Knight" parent="." instance=ExtResource("1_f1pp4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19576, 0.723326, -0.0365481)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19576, 18.5606, -23.5336)
