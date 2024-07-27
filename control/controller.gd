@@ -5,7 +5,9 @@ extends Node
 @export var scroll_sensitivity = 1.0
 @export var min_arm_length = 5.0
 @export var max_arm_length = 50.0
+@export var interact_dis: float = 2.0  # 检查的距离
 
+@onready var interact_area=$Area3D
 @onready var spring_arm=$SpringArm3D
 
 func _physics_process(delta):
@@ -15,7 +17,9 @@ func _physics_process(delta):
 	var input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var dir = Vector3(input.x, 0, input.y).rotated(Vector3.UP, spring_arm.rotation.y)
 	character.move(delta,dir)
-	print(spring_arm.spring_length)
+	
+	var forward_direction = -character.global_transform.basis.z.normalized()
+	interact_area.global_transform.origin = character.global_transform.origin + forward_direction * interact_dis+Vector3(0,0.5,0)
 
 func _unhandled_input(event):
 	contol_camera(event)
@@ -37,3 +41,8 @@ func contol_camera(event):
 			spring_arm.spring_length = clamp(spring_arm.spring_length + scroll_sensitivity, min_arm_length, max_arm_length)
 	if event is InputEventPanGesture:
 		spring_arm.spring_length = clamp(spring_arm.spring_length + event.delta.y * scroll_sensitivity * 0.01, min_arm_length, max_arm_length)
+
+
+func _on_area_3d_body_entered(body):
+		print("碰撞")
+	

@@ -1,1 +1,6 @@
 res://control/demo_scene.tscn
+res://character/knight.gd
+res://control/controller.gd
+res://control/controller.tscn
+res://character/knight.tscn
+res://furniture/furniture.tscn
