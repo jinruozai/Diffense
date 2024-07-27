@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722091548
+icon.svg::CompressedTexture2D::699614464667460544::1722087247::1722091549::1::::<><>::
+::res://asset/::1722091540
+::res://asset/model/::1722091540
+::res://asset/model/character/::1722091540
+Knight.glb::PackedScene::6768941162637459574::1722087524::1722091550::1::::<><>::uid://dr6nv78uoxaob::::res://asset/model/character/Knight_knight_texture.png
+Knight_knight_texture.png::CompressedTexture2D::8417296658533745589::1722087524::1722091549::1::::<><>::
+::res://asset/texture/::1722091540
+texture_terrain.jpg::CompressedTexture2D::9021014456002944952::1722090287::1722091549::1::::<><>::
+::res://character/::1722091540
+knight.gd::GDScript::-1::1722091246::0::1::::<>CharacterBody3D<>::
+knight.tscn::PackedScene::7817365413994817307::1722091491::0::1::::<><>::uid://c3o6qbvirve8m::::res://asset/model/character/Knight.glb<>res://character/knight.gd
+::res://control/::1722091540
+controller.gd::GDScript::-1::1722091303::0::1::::<>Node<>::
+controller.tscn::PackedScene::873920701471011829::1722091491::0::1::::<><>::res://control/controller.gd
+demo_scene.tscn::PackedScene::7126251847735708686::1722091491::0::1::::<><>::uid://d1r314mh747sm::::res://asset/texture/texture_terrain.jpg<>uid://mpll1j4q0f62::::res://control/controller.tscn<>uid://djm14pmt3s25d::::res://character/knight.tscn
