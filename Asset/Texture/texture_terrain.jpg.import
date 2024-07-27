@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo527llo2r46b"
-path.s3tc="res://.godot/imported/texture_terrain.jpg-1dfff60008b88bfc1048043555d70f5c.s3tc.ctex"
+uid="uid://d1r314mh747sm"
+path.s3tc="res://.godot/imported/texture_terrain.jpg-fb6c4722b6dac687ff8151abd6fe798f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Asset/Texture/texture_terrain.jpg"
-dest_files=["res://.godot/imported/texture_terrain.jpg-1dfff60008b88bfc1048043555d70f5c.s3tc.ctex"]
+source_file="res://asset/texture/texture_terrain.jpg"
+dest_files=["res://.godot/imported/texture_terrain.jpg-fb6c4722b6dac687ff8151abd6fe798f.s3tc.ctex"]
 
 [params]
 
