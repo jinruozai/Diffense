@@ -1,6 +1,12 @@
-res://control/demo_scene.tscn
-res://character/knight.gd
+res://build/furniture.gd
+res://build/workbench.tscn
+res://scene/demo_scene.tscn
 res://control/controller.gd
 res://control/controller.tscn
-res://character/knight.tscn
-res://furniture/furniture.tscn
+res://furniture.gd
+res://character/knight.gd
+res://ui/hud.gd
+res://ui/hud.tscn
+res://ui/joy_stick.tscn
+res://ui/joy_stick.gd
+res://ui/action_crl_panel.tscn

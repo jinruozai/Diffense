@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bliggopar64xu"]
+
+[ext_resource type="Texture2D" uid="uid://cxftphsek6g5x" path="res://asset/img/joy_stick_frame.png" id="1_p44yg"]
+[ext_resource type="Script" path="res://ui/joy_stick.gd" id="2_hs1sn"]
+[ext_resource type="Texture2D" uid="uid://sptdokg7palu" path="res://asset/img/joy_stick_dot.png" id="2_xpk0s"]
+
+[node name="JoyStick" type="TextureRect"]
+offset_right = 269.0
+offset_bottom = 268.0
+texture = ExtResource("1_p44yg")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_hs1sn")
+
+[node name="Dot" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 192.0
+texture = ExtResource("2_xpk0s")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

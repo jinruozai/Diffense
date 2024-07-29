@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://mpll1j4q0f62"]
+[gd_scene load_steps=5 format=3 uid="uid://mpll1j4q0f62"]
 
 [ext_resource type="Script" path="res://control/controller.gd" id="1_q4aga"]
+[ext_resource type="PackedScene" uid="uid://g3wrld8hdfen" path="res://ui/hud.tscn" id="2_udpdf"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_oeedo"]
 radius = 0.2
@@ -11,6 +12,8 @@ radius = 0.2
 
 [node name="Controller" type="Node"]
 script = ExtResource("1_q4aga")
+
+[node name="HUD" parent="." instance=ExtResource("2_udpdf")]
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 16
@@ -30,3 +33,4 @@ spring_length = 30.0
 fov = 30.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

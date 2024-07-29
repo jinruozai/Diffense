@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmeo8wyb04be4"
-path="res://.godot/imported/desk_work.glb-0e892e0bf8baf508d7015423cd366cf0.scn"
+uid="uid://b48jusnwt0k74"
+path="res://.godot/imported/workbench.glb-5a0db4d549fc999da391dfa6b7739043.scn"
 
 [deps]
 
-source_file="res://asset/model/furniture/desk_work.glb"
-dest_files=["res://.godot/imported/desk_work.glb-0e892e0bf8baf508d7015423cd366cf0.scn"]
+source_file="res://asset/model/furniture/workbench.glb"
+dest_files=["res://.godot/imported/workbench.glb-5a0db4d549fc999da391dfa6b7739043.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
@@ -29,13 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Cube": {
-"generate/physics": true,
-"physics/layer": 17
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

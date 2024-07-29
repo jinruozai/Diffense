@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1k2odtruqldw" path="res://asset/texture/texture_10.png" id="2_e7avy"]
 [ext_resource type="PackedScene" uid="uid://mpll1j4q0f62" path="res://control/controller.tscn" id="2_o38wl"]
 [ext_resource type="PackedScene" uid="uid://djm14pmt3s25d" path="res://character/knight.tscn" id="3_wqmaf"]
-[ext_resource type="PackedScene" uid="uid://h7ik7yafn3x8" path="res://furniture/furniture.tscn" id="5_rl2n8"]
+[ext_resource type="PackedScene" uid="uid://wnv4utwcl6dq" path="res://build/workbench.tscn" id="5_ijosb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ixj6f"]
 
@@ -69,5 +69,17 @@ character = NodePath("../Knight")
 [node name="Knight" parent="." instance=ExtResource("3_wqmaf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
 
-[node name="Furniture" parent="." instance=ExtResource("5_rl2n8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95827, 0, -0.260188)
+[node name="workbench" parent="." instance=ExtResource("5_ijosb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, 0.243389)
+
+[node name="workbench2" parent="." instance=ExtResource("5_ijosb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, 2.28306)
+
+[node name="workbench3" parent="." instance=ExtResource("5_ijosb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, -1.78839)
+
+[node name="workbench4" parent="." instance=ExtResource("5_ijosb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14344, 0, -1.78839)
+
+[node name="workbench5" parent="." instance=ExtResource("5_ijosb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07762, 0, -1.78839)

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgumqu60xns0l"
-path.s3tc="res://.godot/imported/desk_work_texture_08.png-a068514fa6ca289f4469ec81745131e5.s3tc.ctex"
+uid="uid://cqjrk3psww1ha"
+path.s3tc="res://.godot/imported/workbench_texture_08.png-aa21984379b27f0d9273891166af27b2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://asset/model/furniture/desk_work_texture_08.png"
-dest_files=["res://.godot/imported/desk_work_texture_08.png-a068514fa6ca289f4469ec81745131e5.s3tc.ctex"]
+source_file="res://asset/model/furniture/workbench_texture_08.png"
+dest_files=["res://.godot/imported/workbench_texture_08.png-aa21984379b27f0d9273891166af27b2.s3tc.ctex"]
 
 [params]
 

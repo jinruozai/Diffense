@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://h7ik7yafn3x8"]
-
-[ext_resource type="PackedScene" uid="uid://bmeo8wyb04be4" path="res://asset/model/furniture/desk_work.glb" id="1_5bepi"]
-
-[node name="Furniture" type="Node3D" groups=["furniture"]]
-
-[node name="desk_work" parent="." instance=ExtResource("1_5bepi")]

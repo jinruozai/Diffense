@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://g3wrld8hdfen"]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_5bl5f"]
+[ext_resource type="PackedScene" uid="uid://bliggopar64xu" path="res://ui/joy_stick.tscn" id="2_n1ooh"]
+[ext_resource type="PackedScene" uid="uid://sjc3kqy3qdbd" path="res://ui/action_crl_panel.tscn" id="3_l1bjk"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5bl5f")
+
+[node name="Target_Name" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 39.0
+grow_horizontal = 2
+size_flags_vertical = 0
+text = "目标"
+
+[node name="JoyStick" parent="." instance=ExtResource("2_n1ooh")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -171.0
+offset_right = 162.0
+offset_bottom = -13.0
+grow_vertical = 0
+
+[node name="ActionCrlPanel" parent="." instance=ExtResource("3_l1bjk")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[connection signal="interact_target_chged" from="." to="." method="_on_interact_target_chged"]

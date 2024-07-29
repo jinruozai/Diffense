@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="不一样的塔防"
-run/main_scene="res://control/demo_scene.tscn"
+run/main_scene="res://scene/demo_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/image="res://icon.png"
 boot_splash/fullsize=false
@@ -65,8 +65,7 @@ interact={
 3d_physics/layer_2="player"
 3d_physics/layer_3="enemy"
 3d_physics/layer_4="terrain"
-3d_physics/layer_5="pickup"
-3d_physics/layer_6="interact"
+3d_physics/layer_5="interact"
 
 [rendering]
 

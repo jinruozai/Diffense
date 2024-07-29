@@ -7,16 +7,24 @@ extends Node
 @export var max_arm_length = 50.0
 @export var interact_dis: float = 2.0  # 检查的距离
 
+@onready var hud=$HUD
 @onready var interact_area=$Area3D
 @onready var spring_arm=$SpringArm3D
+var joy_stick:Node
+
+var interact_body:Node3D
+
+func _ready():
+	joy_stick=hud.get_joy_stick()
+	print(joy_stick.get_class())
 
 func _physics_process(delta):
 	if not character:
 		return
 	spring_arm.global_transform.origin = character.global_transform.origin+Vector3(0,2,0)
-	var input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	var input = joy_stick.get_move_vector()
 	var dir = Vector3(input.x, 0, input.y).rotated(Vector3.UP, spring_arm.rotation.y)
-	character.move(delta,dir)
+	character.move(dir)
 	
 	var forward_direction = -character.global_transform.basis.z.normalized()
 	interact_area.global_transform.origin = character.global_transform.origin + forward_direction * interact_dis+Vector3(0,0.5,0)
@@ -42,7 +50,13 @@ func contol_camera(event):
 	if event is InputEventPanGesture:
 		spring_arm.spring_length = clamp(spring_arm.spring_length + event.delta.y * scroll_sensitivity * 0.01, min_arm_length, max_arm_length)
 
-
 func _on_area_3d_body_entered(body):
-		print("碰撞")
-	
+	interact_body=body
+	body.emit_signal("focus", true)
+	hud.emit_signal("interact_target_chged",body)
+
+func _on_area_3d_body_exited(body):
+	if body==interact_body:
+		interact_body=null
+	body.emit_signal("focus", false)
+	hud.emit_signal("interact_target_chged",interact_body)
