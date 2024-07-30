@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://sjc3kqy3qdbd"]
+[gd_scene load_steps=3 format=3 uid="uid://sjc3kqy3qdbd"]
 
 [ext_resource type="Script" path="res://ui/action_ctrl.gd" id="1_gklt1"]
+[ext_resource type="Script" path="res://ui/action_btn.gd" id="2_idptp"]
 
 [node name="ActionCrlPanel" type="Control"]
 layout_mode = 3
@@ -9,7 +10,7 @@ offset_right = 256.0
 offset_bottom = 256.0
 script = ExtResource("1_gklt1")
 
-[node name="Btn_0" type="Button" parent="."]
+[node name="action_0" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -23,33 +24,49 @@ offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "操作"
+script = ExtResource("2_idptp")
 
-[node name="Btn_1" type="Button" parent="."]
+[node name="action_1" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -220.0
-offset_top = -152.0
-offset_right = -156.0
-offset_bottom = -88.0
+offset_left = -236.0
+offset_top = -135.0
+offset_right = -172.0
+offset_bottom = -71.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "交互"
+script = ExtResource("2_idptp")
 
-[node name="Btn_2" type="Button" parent="."]
+[node name="action_2" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -139.0
-offset_top = -224.0
-offset_right = -75.0
-offset_bottom = -160.0
+offset_left = -168.0
+offset_top = -227.0
+offset_right = -104.0
+offset_bottom = -163.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "举起"
+script = ExtResource("2_idptp")
+
+[node name="action_3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -62.0
+offset_top = 5.0
+offset_right = -12.0
+offset_bottom = 55.0
+grow_horizontal = 0
+text = "跳"
+script = ExtResource("2_idptp")
