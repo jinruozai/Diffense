@@ -1,6 +1,12 @@
 extends Control
 
 var ctrl_character:GCharacter
+var btn_no_list:Array[int]
+
+func _ready():
+	var count=get_child_count()
+	for i in range(count):
+		btn_no_list.append(i)
 
 func link_target(tag):
 	ctrl_character=tag
@@ -9,7 +15,7 @@ func link_target(tag):
 func noti_available_actions_chged(actions):
 	var action
 	var pbtn:Button
-	var szno=[0,1,2]
+	var szno=btn_no_list.duplicate()
 	var btnno:int
 	for s in actions:
 		action=Game_Def.get_action_def(s)

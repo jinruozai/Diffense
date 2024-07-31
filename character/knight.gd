@@ -10,20 +10,11 @@ class_name GCharacter
 @onready var anim_tree=$AnimationTree
 @onready var anim_state=$AnimationTree.get("parameters/playback")
 @onready var interact_area=$Area3D
+@onready var holder_tag=$Holder
 
 var gravity=ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_jumping=0
 var move_dir:Vector3
-var attacks=[
-	"1H_Melee_Attack_Slice_Diagonal",
-	"1H_Melee_Attack_Slice_Horizontal",
-	"1H_Melee_Attack_Chop"
-]
-#能对目标进行的操作
-var ability_tag_map=[
-	"pickup",
-	"interact"
-]
 
 var available_tag_actions=[]
 
@@ -62,12 +53,14 @@ func set_interact_target(tag,b):
 	interact_target_chged.emit(interact_target)
 	
 func ref_available_actions():
-	available_tag_actions=["attack","jump"]
-	if interact_target:
-		for s in ability_tag_map:
-			if interact_target.has_method("on_"+s):
-				available_tag_actions.append(s)
-	print(available_tag_actions)
+	available_tag_actions.clear()
+	var phold=holder_tag.get_child(0)
+	if phold:
+		available_tag_actions.append("putdown")
+	else:
+		if interact_target:
+			if interact_target.has_method("on_pickup"):
+				available_tag_actions.append("pickup")
 	available_actions_chged.emit(available_tag_actions)
 
 func move(dir:Vector3):
@@ -79,13 +72,31 @@ func jump():
 	if not is_jumping and is_on_floor():
 		move_dir.y=1.0
 
-func attack():
-	if is_jumping>0:
-		return
-	anim_state.travel(attacks.pick_random())
-
 func pickup():
-	print("拾取")
+	if not interact_target:
+		return
+	var aabb=interact_target.get_aabb()
+	var maxsize=max(aabb.size.x,aabb.size.z,0.5)
+	var holdscale=0.5/maxsize
+	holder_tag.scale = Vector3(holdscale, holdscale, holdscale)
+	interact_target.on_pickup()
+	interact_target.reparent(holder_tag,false)
+	interact_target.position=Vector3.ZERO
+	interact_target.rotation=Vector3.ZERO
+	interact_target=null
+	ref_available_actions()
+
+func putdown():
+	var phold=holder_tag.get_child(0)
+	if not phold:
+		return
+	var front_position = global_transform.origin -global_transform.basis.z.normalized() * 2.0
+	phold.on_putdown()
+	phold.reparent(get_parent(),true)
+	phold.global_transform.origin=Vector3(int(front_position.x),front_position.y,int(front_position.z))
+	var rotation = global_transform.basis.get_euler()
+	rotation.y = round(rotation.y / (PI / 2)) * (PI / 2)  # 四舍五入到最近的 90 度 (PI / 2 弧度)
+	phold.global_transform.basis=Basis.from_euler(rotation)
 
 func interact():
 	print("交互")

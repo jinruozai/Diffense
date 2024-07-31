@@ -17,6 +17,9 @@ func set_action(s,action,character):
 			text=action["text"]+"【"+key_name+"】"
 		else:
 			text=action["text"]
+		var connections = pressed.get_connections()
+		for conn in connections:
+			pressed.disconnect(conn.callable)
 		pressed.connect(Callable(character,s))
 	visible=true
 

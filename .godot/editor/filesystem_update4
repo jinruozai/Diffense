@@ -1,6 +1,4 @@
 res://scene/demo_scene.tscn
-res://shader/interact_highlight.material
 res://ui/action_crl_panel.tscn
-res://ui/hud.tscn
+res://build/workbench.tscn
 res://character/knight.tscn
-res://control/controller.tscn
