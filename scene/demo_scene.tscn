@@ -68,19 +68,19 @@ shape = SubResource("BoxShape3D_xjjca")
 [node name="Furniture" type="Node3D" parent="."]
 
 [node name="workbench" parent="Furniture" instance=ExtResource("5_ijosb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, 0.243389)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
 
 [node name="workbench2" parent="Furniture" instance=ExtResource("5_ijosb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, 2.28306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
 
 [node name="workbench3" parent="Furniture" instance=ExtResource("5_ijosb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21561, 0, -1.78839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
 
 [node name="workbench4" parent="Furniture" instance=ExtResource("5_ijosb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14344, 0, -1.78839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
 
 [node name="workbench5" parent="Furniture" instance=ExtResource("5_ijosb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07762, 0, -1.78839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 
 [node name="Controller" parent="." node_paths=PackedStringArray("character") instance=ExtResource("2_o38wl")]
 character = NodePath("../Knight")
