@@ -1,3 +1,10 @@
 res://orb/orb.gd
 res://orb/orb.tscn
 res://scene/demo_scene.tscn
+res://character/enemy.tscn
+res://character/enemy.gd
+res://build/workbench.tscn
+res://build/furniture.gd
+res://build/mahjong.tscn
+res://build/mahjong.gd
+res://data/game_def.gd

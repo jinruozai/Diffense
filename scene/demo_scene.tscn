@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8sald0rtltkg"]
+[gd_scene load_steps=17 format=3 uid="uid://c8sald0rtltkg"]
 
 [ext_resource type="Texture2D" uid="uid://7i2pjjfhmaxk" path="res://asset/texture/texture_09.png" id="1_jnppg"]
 [ext_resource type="Texture2D" uid="uid://1k2odtruqldw" path="res://asset/texture/texture_10.png" id="2_e7avy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://djm14pmt3s25d" path="res://character/knight.tscn" id="3_wqmaf"]
 [ext_resource type="PackedScene" uid="uid://wnv4utwcl6dq" path="res://build/workbench.tscn" id="5_ijosb"]
 [ext_resource type="PackedScene" uid="uid://d212xgj087dbm" path="res://build/mahjong.tscn" id="6_3711p"]
+[ext_resource type="PackedScene" uid="uid://bb611ewxdfs52" path="res://character/enemy.tscn" id="7_2n55j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ixj6f"]
 
@@ -90,7 +91,10 @@ character = NodePath("../Knight")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
 
 [node name="mahjong" parent="." instance=ExtResource("6_3711p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3, 0, -2)
 
 [node name="mahjong2" parent="." instance=ExtResource("6_3711p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 0, -2)
+
+[node name="Enemy" parent="." instance=ExtResource("7_2n55j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 7)

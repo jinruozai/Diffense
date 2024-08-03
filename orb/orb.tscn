@@ -12,6 +12,8 @@ material = SubResource("StandardMaterial3D_oi5og")
 [sub_resource type="SphereShape3D" id="SphereShape3D_0d8a8"]
 
 [node name="Orb" type="Area3D"]
+collision_layer = 0
+collision_mask = 4
 script = ExtResource("1_dum8w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -21,4 +23,3 @@ mesh = SubResource("SphereMesh_lsw5k")
 shape = SubResource("SphereShape3D_0d8a8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

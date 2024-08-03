@@ -1,4 +1,5 @@
-extends Node3D
+extends StaticBody3D
+class_name GFurniture
 
 var mat_highlight=preload("res://shader/interact_highlight.material")
 signal focus(b)

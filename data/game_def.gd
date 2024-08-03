@@ -15,8 +15,8 @@ const ACTIONS = {
 	},
 }
 
-func get_action_def(name):
-	var action = ACTIONS.get(name)
+func get_action_def(s):
+	var action = ACTIONS.get(s)
 	if action:
 		return action
 	return null

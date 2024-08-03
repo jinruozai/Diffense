@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb611ewxdfs52"]
+
+[ext_resource type="Script" path="res://character/enemy.gd" id="1_peqov"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ciqn1"]
+albedo_color = Color(1, 0.23, 0.23, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fqutc"]
+material = SubResource("StandardMaterial3D_ciqn1")
+height = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_5gc1s"]
+size = Vector3(0.3, 0.3, 0.2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8dv6o"]
+height = 1.5
+
+[node name="Enemy" type="RigidBody3D"]
+collision_layer = 5
+script = ExtResource("1_peqov")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+mesh = SubResource("CapsuleMesh_fqutc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.211295, -0.51616)
+mesh = SubResource("BoxMesh_5gc1s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_8dv6o")
+
+[connection signal="orb_hit_body" from="." to="." method="_on_orb_hit_body"]
