@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://m6grn7jb0ytr"]
+
+[ext_resource type="Script" path="res://orb/orb.gd" id="1_dum8w"]
+[ext_resource type="Texture2D" uid="uid://sjwfnmuxnnoj" path="res://asset/model/mahjong/mahjong_bamboo_1.png" id="2_1tcmb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi5og"]
+albedo_texture = ExtResource("2_1tcmb")
+
+[sub_resource type="SphereMesh" id="SphereMesh_lsw5k"]
+material = SubResource("StandardMaterial3D_oi5og")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0d8a8"]
+
+[node name="Orb" type="Area3D"]
+script = ExtResource("1_dum8w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_lsw5k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_0d8a8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
