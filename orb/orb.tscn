@@ -8,8 +8,11 @@ albedo_texture = ExtResource("2_1tcmb")
 
 [sub_resource type="SphereMesh" id="SphereMesh_lsw5k"]
 material = SubResource("StandardMaterial3D_oi5og")
+radius = 0.1
+height = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0d8a8"]
+radius = 0.1
 
 [node name="Orb" type="Area3D"]
 collision_layer = 0

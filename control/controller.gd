@@ -1,6 +1,6 @@
 extends Node
 
-@export var character:Node
+@export var player_scene:PackedScene
 @export var mouse_sensitivity=0.0015
 @export var scroll_sensitivity = 1.0
 @export var min_arm_length = 5.0
@@ -10,14 +10,17 @@ extends Node
 @onready var hud=$HUD
 @onready var spring_arm=$SpringArm3D
 var interact_target:Node
+var character:Node
 
 func _ready():
-	if not character:
-		print("no character")
-		set_physics_process(false)
+	if not player_scene:
+		push_error("no player scene")
 		return
-	hud.link_target(character,spring_arm)
+	character=player_scene.instantiate()
+	add_child(character)
+	character.add_to_group("player")
 	character.connect("interact_target_chged",noti_interact_tag_chged)
+	hud.link_target(character,spring_arm)
 	set_physics_process(true)
 
 func _physics_process(delta):

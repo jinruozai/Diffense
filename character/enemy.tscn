@@ -15,8 +15,8 @@ size = Vector3(0.3, 0.3, 0.2)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8dv6o"]
 height = 1.5
 
-[node name="Enemy" type="RigidBody3D"]
-collision_layer = 5
+[node name="Enemy" type="CharacterBody3D"]
+collision_layer = 4
 script = ExtResource("1_peqov")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -31,4 +31,8 @@ mesh = SubResource("BoxMesh_5gc1s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 shape = SubResource("CapsuleShape3D_8dv6o")
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+
 [connection signal="orb_hit_body" from="." to="." method="_on_orb_hit_body"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

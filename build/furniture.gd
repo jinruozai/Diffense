@@ -24,7 +24,6 @@ func on_interact():
 	pass
 
 func _on_focus(b):
-	print(name)
 	mesh.material_overlay=mat_highlight if b else null
 
 func check_default_mesh():
