@@ -26,6 +26,20 @@ Game_Def="*res://data/game_def.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[file_customization]
+
+folder_colors={
+"res://asset/": "purple",
+"res://data/": "teal",
+"res://entity/": "blue",
+"res://item/": "green",
+"res://resource/": "orange",
+"res://scene/": "blue",
+"res://shader/": "teal",
+"res://ui/": "yellow",
+"res://vfx/": "pink"
+}
+
 [input]
 
 move_left={

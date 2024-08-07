@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck4hdfplekybn"]
+
+[ext_resource type="Script" path="res://entity/build/entity_mahjong.gd" id="1_ggadu"]
+[ext_resource type="Resource" uid="uid://c56537ubmpqv8" path="res://resource/item/mahjong/bamboo_1.res" id="2_a74lo"]
+
+[node name="EntityBuild" type="Node3D"]
+script = ExtResource("1_ggadu")
+res_item = ExtResource("2_a74lo")

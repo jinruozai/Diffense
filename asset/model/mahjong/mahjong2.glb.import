@@ -1,0 +1,50 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://vxmagtsj4mwr"
+path="res://.godot/imported/mahjong2.glb-b4beafa1377b50b10ad2e0d80ef8ae4e.scn"
+
+[deps]
+
+source_file="res://asset/model/mahjong/mahjong2.glb"
+dest_files=["res://.godot/imported/mahjong2.glb-b4beafa1377b50b10ad2e0d80ef8ae4e.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://shader/mahjong.material"
+}
+},
+"nodes": {
+"PATH:Root/Cube": {
+"generate/physics": true,
+"physics/layer": 17,
+"physics/shape_type": 3,
+"primitive/position": Vector3(0, 0.5, 0),
+"primitive/size": Vector3(2, 1, 2)
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://4v8a6xmh03ku"]
+
+[ext_resource type="Script" path="res://entity/build/enimy_spawner.gd" id="1_ojsgr"]
+[ext_resource type="PackedScene" uid="uid://bb611ewxdfs52" path="res://entity/character/enemy.tscn" id="2_5ambk"]
+[ext_resource type="PackedScene" uid="uid://ct73xcuxm1m6" path="res://asset/model/decoration/banner.glb" id="3_vfssb"]
+
+[node name="EnimySpawner" type="Node3D"]
+script = ExtResource("1_ojsgr")
+monster_scenes = Array[PackedScene]([ExtResource("2_5ambk")])
+
+[node name="banner2" parent="." instance=ExtResource("3_vfssb")]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="spawn_monsters"]

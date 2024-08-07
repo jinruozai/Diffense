@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4obsv77pqr2v"
+uid="uid://yxqm442x4nvy"
 path="res://.godot/imported/mahjong.glb-47c5deaf2eb398ed32ea5ebc448d4d37.scn"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/mahjong.glb-47c5deaf2eb398ed32ea5ebc448d4d37.
 
 [params]
 
-nodes/root_type="StaticBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
@@ -29,6 +29,14 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Cube": {
+"generate/physics": true,
+"physics/layer": 17,
+"physics/shape_type": 3
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

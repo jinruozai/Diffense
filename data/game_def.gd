@@ -9,10 +9,14 @@ const ACTIONS = {
 		"text": "放下",
 		"btn":0
 	},
-	"interact": {
-		"text": "交互",
+	"flip": {
+		"text": "翻牌",
 		"btn":1
 	},
+	"discard": {
+		"text": "出牌",
+		"btn":1
+	}
 }
 
 func get_action_def(s):

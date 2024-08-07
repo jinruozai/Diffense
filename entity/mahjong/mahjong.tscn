@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyyusool76by8"]
+
+[ext_resource type="PackedScene" uid="uid://vxmagtsj4mwr" path="res://asset/model/mahjong/mahjong2.glb" id="1_p6eu8"]
+
+[node name="mahjong2" instance=ExtResource("1_p6eu8")]
