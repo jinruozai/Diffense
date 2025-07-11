@@ -14,5 +14,3 @@ func get_canbe_actions():
 		return actions
 	actions.append("pickup")
 	return actions
-
-

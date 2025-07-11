@@ -62,4 +62,3 @@ func check_default_mesh(pnode,b=0):
 		if check_default_mesh(sub,b):
 			return 1
 	return 0
-

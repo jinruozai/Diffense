@@ -1,6 +1,0 @@
-res://scene/demo_scene.tscn
-res://shader/mahjong.gdshader
-res://shader/mahjong.material
-res://item/skill/orb.tscn
-res://entity/character/controller.tscn
-res://entity/character/controller.gd
